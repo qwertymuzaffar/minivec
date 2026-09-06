@@ -1,0 +1,55 @@
+{
+  "name": "minivec",
+  "version": "0.1.0",
+  "description": "Tiny embedded vector store - HNSW approximate search from scratch, exact search, metadata filters, JSON persistence. Zero dependencies; Node, browser, edge.",
+  "keywords": [
+    "vector-database",
+    "vector-store",
+    "hnsw",
+    "ann",
+    "embeddings",
+    "similarity-search",
+    "semantic-search",
+    "rag",
+    "nearest-neighbor",
+    "in-memory",
+    "browser"
+  ],
+  "license": "MIT",
+  "author": "Muzaffar Qosimov",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qwertymuzaffar/minivec.git"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run build && npm test",
+    "bench": "npm run build && node scripts/bench.mjs"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "4.1.11",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2",
+    "vitest": "^4.0.8"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "minivec",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tiny embedded vector store - HNSW approximate search from scratch, exact search, metadata filters, JSON persistence. Zero dependencies; Node, browser, edge.",
   "keywords": [
     "vector-database",
